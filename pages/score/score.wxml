@@ -1,0 +1,21 @@
+<!--pages/score/score.wxml-->
+<view class="container">
+<view class="title">
+  <image class="title-img"  src="/images/logo.png"></image>
+  <text class="title-text">小蓝校园通</text>
+</view>
+  <view class="from-box">
+  <label> <text style="color:red;">*</text>学号:</label>
+  <input class="studentid" type="text" />
+   <label><text style="color:red;">*</text>教务密码：</label>
+  <input class="studentid" type="text" />
+   <label><text style="color:red;">*</text>一卡通密码：</label>
+  <input class="studentid" type="text" />
+   <label>姓名：</label>
+  <input class="studentid" type="text" />
+   <label>微信号：</label>
+  <input class="studentid" type="text" />
+  <button class="btn" >登录</button>
+  </view>
+
+</view>

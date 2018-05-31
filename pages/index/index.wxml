@@ -1,0 +1,73 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" bindfocus="inputShowed" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">我的</view>
+  </view>
+
+
+
+  <view class="title-box">
+    <image class="title-img" src="/images/bg.png"></image>
+    <view class="title">发现，生活的精彩</view>
+    <view class="fabu" bindtap="addpage">发布信息</view>
+  </view>
+  <view class="list">
+    <view bindtap="listtap" data-type="{{item.listname}}" class="listbox" wx:for="{{listArr}}" wx:key="index">
+      <image src="{{item.img}}"></image>
+
+      <view class="listname"> {{item.listname}}</view>
+
+    </view>
+  </view>
+  <view class="content">
+    <view class="contentbox" wx:for="{{goodall}}" wx:key="index" bindtap="detailtap" data-id="{{item.id}}" wx:if="{{item.online==1}}">
+      <view class="con-img">
+        <image mode="aspectFill"  src="https://leon.htmlk.cn/images/{{item.imgarr[0]}}"></image>
+      </view>
+      <view class="con-title">
+        <view class="c-title">{{item.title}}</view>
+        <view class="c-price">
+          <view class="">
+            <text class="" style="color:red;font-size:12px">￥</text>
+            <text class="" style="color:red">{{item.price}}</text>
+          </view>
+          <view class="">
+            
+          </view>
+
+        </view>
+        <view class="c-address">
+          <view class="">{{item.city}}</view>
+          <view class="usertext">
+<text style="color:#ccc;font-size:12px">{{item.timetext}}</text>
+            <!--<image class="userimg" src="{{item.userimg}}"></image>
+
+            <text style="margin-left:10rpx"> {{item.username}}</text>-->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-footer " style="background:#fff;margin-top:20rpx">
+    <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">番茄文化馆</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2016-2017 leon</view>
+    <view class="weui-footer__text">客服：leon</view>
+  </view>
+</view>

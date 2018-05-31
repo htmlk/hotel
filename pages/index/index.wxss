@@ -1,0 +1,109 @@
+/* pages/index/index.wxss */
+.container{
+  background: #ededed;
+}
+.title-img{
+  width: 750rpx;
+  height: 500rpx;
+}
+.fabu{
+  width: 400rpx;
+  height: 70rpx;
+  color: #666;
+  font-size: 12px;
+  line-height: 70rpx;
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  position: absolute;
+  top:300rpx;
+  left: 175rpx;
+  border: 1px solid #ddd;
+}
+.title{
+   width: 400rpx;
+  position: absolute;
+  top:200rpx;
+  left: 175rpx;
+  color: #000;
+  text-align: center;
+}
+.list{
+ display: flex;
+ flex-wrap: wrap;
+ background: #fff;
+
+}
+.listbox{
+  width: 147.5rpx;
+  height: 160rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.listbox image{
+  width: 60%;
+  height: 60%;
+}
+.listname{
+  font-size: 12px;
+  padding-top: 30rpx;
+  
+}
+.content{
+   margin-top: 20rpx;
+}
+.contentbox{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+ 
+}
+.con-img{
+  width: 200rpx;
+}
+.con-img image{
+  width: 200rpx;
+  height: 180rpx;
+}
+.con-title{
+  flex:1;
+  margin-left: 20rpx;
+ 
+}
+.c-price{
+  display: flex;
+  justify-content: space-between
+}
+.c-title{
+  height: 80rpx;
+  font-size: 12px;
+  overflow: hidden
+ 
+}
+.c-address{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10rpx 0;
+  color: #999;
+}
+.userimg{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 25rpx;
+}
+.weui-search-bar{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 750rpx;
+  z-index: 1;
+}
+.usertext{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

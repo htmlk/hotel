@@ -1,0 +1,159 @@
+<!--pages/photo/photo.wxml-->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="weui-cells__title">商品详情：（<text style="color:red">红色</text>为必填项）</view>
+ 
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title">请上传多张图片</view>
+              <view class="weui-uploader__info" style="color:red" wx:if="{{files.length==0}}">{{files.length}}/9</view>
+               <view wx:else class="weui-uploader__info">{{files.length}}/9</view>
+            </view>
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+
+
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                <input hidden="hidden" name="img" value="{{goods_img}}" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">标题：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="title"  placeholder-style="color:red" class="weui-input" placeholder="请输入商品标题" />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">简介：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="intro"  placeholder-style="color:red" class="weui-input" placeholder="请输入商品简介" />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">详情：</view>
+      </view>
+      <view class="weui-cell__bd">
+
+        <textarea  placeholder-style="color:red" name="detail" placeholder="请输入商品详情" />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">价格：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input  placeholder-style="color:red"  type="digit" name="price" class="weui-input" placeholder="请输入价格" />
+      </view>
+    </view>
+<view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">电话：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input  placeholder-style="color:red" type="number" name="phone" class="weui-input" placeholder="请输入电话" />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">微信：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input  placeholder-style="color:red" name="wechat" class="weui-input" placeholder="请输入微信" />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">分类：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="typebindPickerChange" value="{{typeindex}}" range="{{typearray}}">
+          <view class="picker">
+            <view class="" wx:if="{{typeindex==0}}"  style="margin:30rpx 0;color:red">请选择分类</view>
+            <view wx:else style="margin:30rpx 0;color:#000">{{typearray[typeindex]}}</view>
+            <input hidden="hidden" name="type" class="weui-input" placeholder="请选择分类" value="{{typearray[typeindex]}}" />
+          </view>
+        </picker>
+
+      </view>
+    </view>
+
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">推荐指数：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="degreebindPickerChange" value="{{degreeindex}}" range="{{degreearray}}">
+          <view class="picker">
+ <view class="" wx:if="{{degreeindex==0}}"  style="margin:30rpx 0;color:red">请选择指数</view>
+            <view wx:else style="margin:30rpx 0;color:#000">{{degreearray[degreeindex]}}</view>
+            <input name="degree" hidden="hidden" class="weui-input" placeholder="推荐指数：" value="{{degreearray[degreeindex]}}" />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">定位地址：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input  placeholder-style="color:red" name="address" class="weui-input" placeholder="请输入地址" value="{{address}}" />
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">楼层地址：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input  placeholder-style="color:red" name="city" class="weui-input" placeholder="请输入详细地址" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input" style="margin-bottom:150rpx">
+      <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            阅读并同意
+            <navigator url="" class="weui-agree__link">《相关条款》</navigator>
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+  
+
+  </view>
+  <view class="footer">
+    <button class="addbtn" formType="submit">立即发布</button>
+  </view>
+</form>

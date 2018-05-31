@@ -1,0 +1,33 @@
+{
+  "debug": true,
+  "pages": [
+    
+   
+    "pages/index/index",
+    "pages/add/add",
+    "pages/my/my",
+   "pages/sellout/sellout",
+   "pages/buyin/buyin",
+  "pages/pay/pay",
+    "pages/release/release",
+    "pages/list/list",
+    "pages/apply/apply",
+   "pages/detail/detail",
+    "pages/tuijian/tuijian",
+    "pages/ecjtulogin/ecjtulogin",
+    "pages/ecjtuscore/ecjtuscore",
+    "pages/search/search"
+ 
+  ],
+  "networkTimeout": {
+    "request": 1000,
+    "downloadFile": 1000
+  },
+  "window": {
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "番茄文化馆",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,53 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="login" >
+    <view class="logo">
+      <image src="{{userinfo.avatarUrl}}"></image>
+    </view>
+    <view class="name">
+      {{userinfo.nickName}}
+    </view>
+    <view class="">
+      信誉积分：100
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="listbox" wx:for="{{mylist}}" bindtap="listtap" data-id="{{item.id}}" wx:key="index">
+      <image src="{{item.img}}"></image>
+      <text>{{item.listname}}</text>
+    </view>
+  </view>
+
+   <view class="list1" bindtap="yijian">
+   <image style="width:40rpx;height:40rpx;" src="/images/myicon/yijian.png"></image>
+    <text style="margin-left:20rpx">意见反馈</text>  
+  </view>
+   <view class="list2" bindtap="kefu">
+   <image style="width:40rpx;height:40rpx;" src="/images/myicon/kefu.png"></image>
+    <text style="margin-left:20rpx">联系客服</text>   
+  </view>
+  <view class="list2" bindtap="shangcheng">
+   <image style="width:40rpx;height:40rpx;" src="/images/myicon/liwu.png"></image>
+    <text style="margin-left:20rpx">花椒商城</text>   
+  </view>
+   <view class="list2" bindtap="about">
+   <image style="width:40rpx;height:40rpx;" src="/images/myicon/setting.png"></image>
+   <text style="margin-left:20rpx">关于我们</text>    
+  </view>
+  <view class="list2" bindtap="quit">
+   <image style="width:40rpx;height:40rpx;" src="/images/myicon/del.png"></image>
+   <text style="margin-left:20rpx">退出登录</text>    
+  </view>
+
+
+
+   <view class="weui-footer  weui-footer_fixed-bottom " style="background:#fff;margin:20rpx 0 0 0">
+    <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">华东交通大学-南昌孔睦有限公司</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2016-2017 小k</view>
+    <view class="weui-footer__text">客服微信：k1009756987</view>
+  </view>
+   
+</view>

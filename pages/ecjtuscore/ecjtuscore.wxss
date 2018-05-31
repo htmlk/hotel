@@ -1,0 +1,20 @@
+/* pages/ecjtuscore/ecjtuscore.wxss */
+.money{
+  display: flex;
+  height: 300rpx;
+  background: #008842;
+  width: 750rpx;
+}
+.money view{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.money image{
+  width: 100rpx;
+  height: 100rpx;
+
+}

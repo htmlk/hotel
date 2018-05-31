@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">搜索</view>
+  </view>
+
+  <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+    <navigator wx:for='{{val}}' wx:for-item="valitem" url="/pages/detail/detail?id={{valitem.id}}" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view class="listbox">
+        <view class="list-title">{{valitem.title}}</view>
+         <view class="list-price">￥{{valitem.price}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="content"  wx:if="{{goodall.length > 0}}">
+    <navigator class="contentbox" wx:for="{{goodall}}" url="/pages/detail/detail?id={{item.id}}"  wx:key="index" bindtap="detailtap" data-id="{{item.id}}">
+      <view class="con-img">
+        <image src="https://www.htmlk.cn/images/{{item.imgarr[0]}}"></image>
+      </view>
+      <view class="con-title">
+        <view class="c-title">{{item.title}}</view>
+        <view class="c-price">
+          <view class="">
+            <text class="" style="color:red;font-size:12px">￥</text>
+            <text class="" style="color:red">{{item.price}}</text>
+          </view>
+          <view class="">
+            <text style="color:#ccc;font-size:12px">{{item.timetext}}</text>
+          </view>
+
+        </view>
+        <view class="c-address">
+          <view class="">{{item.address}}{{item.city}}</view>
+          <view class="usertext">
+            <image class="userimg" src="{{item.userimg}}"></image>
+
+            <text style="margin-left:10rpx"> {{item.username}}</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

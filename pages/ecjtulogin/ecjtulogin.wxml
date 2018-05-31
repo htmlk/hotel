@@ -1,0 +1,23 @@
+<!--pages/score/score.wxml-->
+<view class="container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="title">
+  <image class="title-img"  src="/images/logo.png"></image>
+  <text class="title-text">小蓝校园通</text>
+</view>
+  <view class="from-box">
+  <label> <text style="color:red;">*</text>学号:</label>
+  <input name="studentid" class="studentid" type="text" />
+   <label><text style="color:red;">*</text>教务密码：</label>
+  <input name="password" class="studentid" type="text" />
+   <label><text style="color:red;">*</text>一卡通密码：</label>
+  <input name="cardpwd" class="studentid" type="text" />
+   <label>姓名：</label>
+  <input name="username" class="studentid" type="text" />
+   <label>微信号：</label>
+  <input name="wechat" class="studentid" type="text" />
+  <button class="btn" formType="submit" >登录</button>
+ 
+  </view>
+</form>
+</view>

@@ -1,0 +1,2 @@
+<!--pages/pay/pay.wxml-->
+<button bindtap="pay">支付</button>

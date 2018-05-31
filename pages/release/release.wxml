@@ -1,0 +1,33 @@
+<view class="container">
+   <view class="content">
+    <view class="contentbox" wx:for="{{goodall}}" wx:key="index" >
+      <view class="con-img" bindtap="detailtap" data-id="{{item.id}}" >
+        <image src="https://www.htmlk.cn/images/{{item.imgarr[0]}}"></image>
+      </view>
+      <view class="con-title">
+        <view class="c-title">{{item.title}}</view>
+        <view class="c-price">
+          <view class="">
+            <text class="" style="color:red;font-size:12px">￥</text>
+            <text class="" style="color:red">{{item.price}}</text>
+          </view>
+          <view class="">
+            <text style="color:#ccc;font-size:12px">{{item.timetext}}</text>
+          </view>
+
+        </view>
+        <view class="c-address">
+          <view class="">{{item.address}}{{item.city}}</view>
+         
+        </view>
+
+        <view class="btn">
+         <view class="delbtn" bindtap="delgood" data-id="{{item.id}}">删除</view>
+        <view class="upbtn">上架 <switch data-id="{{item.id}}" checked="{{item.online}}" bindchange="switch1Change"/></view>
+        
+        
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

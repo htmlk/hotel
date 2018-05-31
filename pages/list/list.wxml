@@ -1,0 +1,119 @@
+<view class="list-tab">
+  <ul>
+    <li class="{{current == 0 ? 'active' : ''}}" catchtap="switchSlider" data-index="0">默认</li>
+    <li class="{{current == 1 ? 'active' : ''}}" catchtap="switchSlider" data-index="1">最新</li>
+    <li class="{{current == 2 ? 'active' : ''}}" catchtap="switchSlider" data-index="2">热销</li>
+  </ul>
+</view>
+<swiper class="swiper-box" current="{{current}}" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" bindchange="changeSlider">
+
+  <!-- 1 -->
+  <swiper-item>
+    <scroll-view scroll-y="true" class="scroll-box">
+      <view class="list-view">
+        <view class="content">
+          <view class="contentbox" wx:for="{{goodall}}" wx:key="index" bindtap="detailtap" data-id="{{item.id}}" wx:if="{{item.online==1}}">
+            <view class="con-img">
+              <image class="slide-image" src="https://leon.htmlk.cn/images/{{item.imgarr[0]}}"></image>
+            </view>
+            <view class="con-title">
+              <view class="c-title">{{item.title}}</view>
+              <view class="c-price">
+                <view class="">
+                  <text class="" style="color:red;font-size:12px">￥</text>
+                  <text class="" style="color:red">{{item.price}}</text>
+                </view>
+                <view class="">
+                  <text style="color:#ccc;font-size:12px">{{item.timetext}}</text>
+                </view>
+
+              </view>
+              <view class="c-address">
+                <view class="">{{item.city}}</view>
+                <view class="usertext">
+                  <image class="userimg" src="{{item.userimg}}"></image>
+
+                  <text style="margin-left:10rpx"> {{item.username}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <!--2  -->
+  <swiper-item>
+    <scroll-view scroll-y="true" class="scroll-box">
+      <view class="list-view">
+       <view class="content">
+          <view class="contentbox" wx:for="{{goodall}}" wx:key="index" bindtap="detailtap" data-id="{{item.id}}" wx:if="{{item.online==1}}">
+            <view class="con-img">
+              <image class="slide-image" src="https://leon.htmlk.cn/images/{{item.imgarr[0]}}"></image>
+            </view>
+            <view class="con-title">
+              <view class="c-title">{{item.title}}</view>
+              <view class="c-price">
+                <view class="">
+                  <text class="" style="color:red;font-size:12px">￥</text>
+                  <text class="" style="color:red">{{item.price}}</text>
+                </view>
+                <view class="">
+                  <text style="color:#ccc;font-size:12px">{{item.timetext}}</text>
+                </view>
+
+              </view>
+              <view class="c-address">
+                <view class="">{{item.city}}</view>
+                <view class="usertext">
+                  <image class="userimg" src="{{item.userimg}}"></image>
+
+                  <text style="margin-left:10rpx"> {{item.username}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 3 -->
+  <swiper-item>
+    <scroll-view scroll-y="true" class="scroll-box">
+      <view class="list-view">
+      <view class="content">
+          <view class="contentbox" wx:for="{{goodall}}" wx:key="index" bindtap="detailtap" data-id="{{item.id}}" wx:if="{{item.online==1}}">
+            <view class="con-img">
+              <image class="slide-image" src="https://www.htmlk.cn/images/{{item.imgarr[0]}}"></image>
+            </view>
+            <view class="con-title">
+              <view class="c-title">{{item.title}}</view>
+              <view class="c-price">
+                <view class="">
+                  <text class="" style="color:red;font-size:12px">￥</text>
+                  <text class="" style="color:red">{{item.price}}</text>
+                </view>
+                <view class="">
+                  <text style="color:#ccc;font-size:12px">{{item.timetext}}</text>
+                </view>
+
+              </view>
+              <view class="c-address">
+                <view class="">{{item.city}}</view>
+                <view class="usertext">
+                  <image class="userimg" src="{{item.userimg}}"></image>
+
+                  <text style="margin-left:10rpx"> {{item.username}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+</swiper>

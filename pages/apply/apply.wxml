@@ -1,0 +1,74 @@
+<!--pages/apply/apply.wxml-->
+<view class="classname">
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="weui-cells__title">请选择提现方式</view>
+  <view class="weui-cells weui-cells_after-title">
+    <radio-group bindchange="radioChange">
+      <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+        <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+        <view class="weui-cell__bd">{{item.name}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+          <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+        </view>
+      </label>
+    </radio-group>
+    <view class="weui-cell weui-cell_link">
+      <view class="weui-cell__bd">添加更多</view>
+    </view>
+  </view>
+  <view class="weui-cells__title">请输入微信/支付宝账号</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input ">
+      <view class="weui-cell__hd">
+        <view class="weui-label"  >账号：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"  name="card" placeholder="请输入账号" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input ">
+      <view class="weui-cell__hd">
+        <view class="weui-label"  >电话：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="number"   name="phone" placeholder="联系电话" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input ">
+      <view class="weui-cell__hd">
+        <view class="weui-label"  >金额：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="digit" name="money"  placeholder="不得大于{{price}}元" />
+      </view>
+    </view>
+     <view class="weui-cell weui-cell_input ">
+      <view class="weui-cell__hd">
+        <view class="weui-label" >备注：</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="remarks" class="weui-input" placeholder="备注你的问题（选填）" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            阅读并同意
+            <navigator url="" class="weui-agree__link">《相关条款》</navigator>
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+
+  <view class="classname" style="padding:20rpx;">
+    <button formType="submit" type="primary">确认提现</button>
+  </view>
+  </form>
+</view>

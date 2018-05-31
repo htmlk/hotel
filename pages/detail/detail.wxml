@@ -1,0 +1,73 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image bindtap="showimg" src="https://leon.htmlk.cn/images/{{item}}" class="slide-image" mode="aspectFill" data-url="https://leon.htmlk.cn/images/{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class="list">
+    <view class="list-price">
+      <view class="classname">
+        <text style="color:red;font-size:12px">￥</text>
+        <text style="color:red;font-size:20px">{{detailinfo.price}}</text>
+        <text style="color:#ccc;font-size:12px"> {{detailinfo.degree}}成新</text>
+      </view>
+      <view class="classname">
+        <text style="color:#ccc;font-size:12px">{{detailinfo.timetext}}</text>
+      </view>
+
+    </view>
+
+    <view class="list-title">
+     {{detailinfo.title}}</view>
+
+    <view class="list-intro">
+      简介：{{detailinfo.intro}}
+    </view>
+    <view class="list-intro">
+      地址：{{detailinfo.address}}{{detailinfo.city}}
+    </view>
+
+  </view>
+  <view class="userinfo">
+    <view class="user-img">
+      <image src="{{detailinfo.userimg}}"></image>
+    </view>
+    <view class="user-name"  bindtap="copywechat" data-id="{{detailinfo.wechat}}">
+    <text>{{detailinfo.username}}  </text>
+      <text>微信号：{{detailinfo.wechat}} <text style="color:red;font-size:12px;border:1px solid red;padding:10rpx;  border-radius: 10rpx">复制</text></text>
+    </view>
+  </view>
+
+  <view class="list-detail">
+    商品详情：{{detailinfo.detail}}
+ <block wx:for="{{imgUrls}}" wx:key="index2">
+     
+        <image bindtap="showimg" src="https://leon.htmlk.cn/images/{{item}}" class="slide-image" mode="aspectFit" data-url="http://leon.htmlk.cn:84/images/{{item}}" />
+      
+    </block>
+  </view>
+
+   <view class="weui-footer " style="background:#fff;margin:20rpx 0 100rpx 0">
+    <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">leon</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2016-2018 leon</view>
+    <view class="weui-footer__text">客服：leon</view>
+    
+  </view>
+
+  
+  <view class="footer">
+    <view class="cellbtn" bindtap="callphone" data-id="{{detailinfo.phone}}">
+      拨打电话
+    </view>
+    <view class="paybtn" bindtap="copywechat" data-id="{{detailinfo.wechat}}">
+      复制微信
+    </view>
+  </view>
+</view>

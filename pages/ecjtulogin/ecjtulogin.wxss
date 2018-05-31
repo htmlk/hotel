@@ -1,0 +1,45 @@
+/* pages/score/score.wxss */
+page{
+ 
+  height: 100%;
+  width: 100%;
+}
+.container{
+  height: 100%;
+  width: 100%;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50rpx;
+}
+.title-img{
+  width: 200rpx;
+  height: 200rpx;
+}
+.title-text{
+  color: #4a4aff;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.from-box{
+  padding:0 80rpx; 
+}
+.from-box label{
+  font-size: 12px;
+  color: #4a4aff;
+}
+.from-box input{
+  color: #4a4aff;
+}
+.studentid{
+  border-bottom: 2px solid #4a4aff;
+}
+.btn{
+  background: #4a4aff;
+  margin: 20rpx 0;
+  color: #fff;
+}

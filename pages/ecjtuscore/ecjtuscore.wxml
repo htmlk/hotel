@@ -1,0 +1,21 @@
+<!--pages/ecjtuscore/ecjtuscore.wxml-->
+<view class="container">
+<view class="money">
+ <view class="">
+  <image src="/images/icon/add.png" bindtap="addpage"></image>
+   充值
+  </view>
+  <view class="">
+  <image src="/images/icon/money.png"></image>
+   <text class="">一卡通</text>
+    <text class="">￥{{price}}</text>
+  </view>
+  <view class="">
+  <image src="/images/icon/addpay.png" bindtap="apply" data-id="{{price}}"></image>
+   消费情况
+  </view>
+</view>
+
+
+</view>
+

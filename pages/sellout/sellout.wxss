@@ -1,0 +1,67 @@
+/* /pages/release/release.wxss */
+page{
+    background: #ededed;
+}
+.money{
+  display: flex;
+  height: 300rpx;
+  background: #008842;
+  width: 750rpx;
+}
+.money view{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.money image{
+  width: 100rpx;
+  height: 100rpx;
+
+}
+.contentbox{
+  background: #fff;
+  margin: 10rpx 0;
+  padding: 20rpx;
+}
+.c-title{
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: #ccc;
+}
+.c-body{
+   font-size: 16px;
+  color: #333;
+}
+.c-price{
+  display: flex;
+  width: 710rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.btn{
+  display: flex;
+  width: 710rpx; 
+  justify-content: space-between;
+  padding-top: 20rpx;
+    font-size: 14px;
+}
+.delbtn{
+  color:green;
+  border:1px solid green;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+}
+.upbtn{
+ color:green;
+ 
+  padding: 5rpx 10rpx;
+}
+.paybtn{
+ color:red;
+  border:1px solid red;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+}

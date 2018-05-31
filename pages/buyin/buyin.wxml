@@ -1,0 +1,34 @@
+<!--pages/buyin/buyin.wxml-->
+<view class="container">
+
+  <view class="content">
+    <view class="contentbox" wx:for="{{goodall}}" wx:key="index">
+      <view class="c-title">
+        单号：{{item.out_trade_no}}
+      </view>
+      <view class="c-body">
+        商品：{{item.body}}
+      </view>
+      <view class="c-body">
+        买方：{{item.username}}
+      </view>
+      <view class="c-price">
+        <view class="">
+          <text class="" style="color:red;font-size:12px">￥</text>
+          <text class="" style="color:red">{{item.total_fee/100}}</text>
+        </view>
+        <view class="">
+          <text style="color:#ccc;font-size:12px">下单时间：{{item.timetext}}</text>
+        </view>
+
+      </view>
+      <view class="btn">
+        <view class="delbtn" bindtap="detailtap" data-id="{{item.good_id}}">查看商品</view>
+        <view class="upbtn" wx:if="{{item.pay_state==1}}">已支付</view>
+        <view class="paybtn" wx:else>立即支付</view>
+
+      </view>
+     
+    </view>
+  </view>
+</view>

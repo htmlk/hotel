@@ -1,0 +1,33 @@
+/* pages/add/add.wxss */
+
+.weui-cells{
+ width: 750rpx;
+ overflow-x: hidden;
+}
+.footer{
+  position: fixed;
+  bottom:0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  background: #fff;
+  z-index:10 ;
+  border-top:1px solid #ccc;
+  padding: 20rpx 0;
+}
+.addbtn{
+    width: 100%;
+    margin: 0 20rpx;
+    background: #ff5647;
+    color: #fff;
+    border-radius: 5rpx;
+    text-align: center;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+form{
+  width: 750rpx;
+  
+}

@@ -1,0 +1,80 @@
+/* pages/detail/detail.wxss */
+.container{
+  background: #ededed;
+  overflow-x: hidden
+}
+swiper{
+  width:750rpx;
+  height: 500rpx; 
+}
+.slide-image{
+  width:750rpx;
+  height: 500rpx; 
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 750rpx;
+  padding: 20rpx;
+  border-top:1px solid #ccc;
+  background: #fff;
+
+}
+.cellbtn{
+  background: #008842;
+  color: #fff;
+  padding: 10rpx 100rpx;
+}
+.paybtn{
+  background: #ff5647;
+  color: #fff;
+  margin-left: 20rpx;
+   padding: 10rpx 100rpx;
+  
+}
+.list{
+  padding: 20rpx;
+   background: #fff;
+}
+.list-price{
+  display: flex;
+  justify-content: space-between
+}
+.list-title{
+  font-size: 16px;
+  color: #333;
+}
+.userinfo{
+  background: #fff;
+}
+.list-intro{
+  color: #999;
+  font-size: 14px;
+}
+.list-detail{
+   background: #fff;
+   margin-top: 20rpx;
+   padding: 20rpx;
+}
+.userinfo{
+  display: flex;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.user-img{
+  padding: 10rpx;
+}
+.user-img image{
+  height: 100rpx;
+  width:100rpx;
+  border-radius: 50rpx;
+}
+.user-name{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+

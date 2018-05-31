@@ -1,0 +1,67 @@
+/* pages/my/my.wxss */
+
+page {
+  background: #ededed;
+}
+
+.login {
+  width: 750rpx;
+  background-image: url(http://onxigbxih.bkt.clouddn.com/500057897.png);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.logo image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  box-shadow: 15px 15px 15px solid #ddd;
+}
+
+.list {
+  display: flex;
+  width: 750rpx;
+  padding: 20rpx 0;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.listbox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.listbox image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.list1 {
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.list2 {
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.footer{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+}
